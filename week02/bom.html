@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <!-- Charset y viewport: obligatorios para validar y verse bien en móvil -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO/Accesibilidad: opcionales pero recomendados -->
+  <meta name="description" content="BOM (Book of Mormon) favorites app for WDD 131." />
+  <meta name="author" content="Emiliano Rivero" />
+
+  <!-- Detallitos nice-to-have -->
+  <meta name="theme-color" content="#0a0a0a" />
+  <link rel="icon" href="favicon.ico" />
+
+  <title>WDD 131 · BOM (Book of Mormon) — Emi Rivero</title>
+
+  <!-- Si usás CSS externo, descomentá esto -->
+  <!-- <link rel="stylesheet" href="styles/bom.css"> -->
+</head>
+<body>
+  <header>
+    <h1>📖 Book of Mormon - Top 10</h1>
+<main>
+	<label for="favchap">Enter Book and Chapter: </label>
+	<input type="text" id="favchap" placeholder="Alma 5">
+	<button type="submit">Add Chapter</button>
+	<ul id="list"></ul>
+</main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> Emiliano Rivero</small>
+  </footer>
+
+  <!-- Si usás JS externo, descomentá esto -->
+  <!-- <script src="scripts/bom.js" defer></script> -->
+
+  <script>
+    // Mini helper para el año en el footer (válido y cero magia)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
