@@ -1,11 +1,14 @@
 @media (min-width: 768px) {
-  #hamburger { display: none !important; }
+  #hamburger {
+    display: none !important;   
+  }
 
   nav .menu {
     display: flex !important;
     flex-direction: row;
     gap: 1.5rem;
     padding: 0;
+    margin: 0;
   }
 }
 
