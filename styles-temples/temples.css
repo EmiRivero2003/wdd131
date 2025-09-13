@@ -106,10 +106,10 @@ footer {
 
 @media (min-width: 768px) {
   header #hamburger {
-    display: none !important;     
+    display: none !important;
   }
   nav .menu {
-    display: flex !important;    
+    display: flex !important;
     flex-direction: row;
     gap: 1.5rem;
     padding: 0;
