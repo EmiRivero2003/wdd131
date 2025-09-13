@@ -1,20 +1,16 @@
-/* ----------- RESET ----------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* ----------- VARIABLES ----------- */
+/* VARIABLES */
 :root {
-  --primary-color: rgb(240, 240, 240);   
-  --secondary-color: rgb(28, 117, 168); 
-  --accent-color: #FFD700;               
+  --primary-color: rgb(240, 240, 240);
+  --secondary-color: rgb(28, 117, 168);
+  --accent-color: #FFD700;
   --heading-font: 'Oswald', sans-serif;
   --body-font: 'Lora', serif;
 }
 
-/* ----------- BODY ----------- */
+/* BODY */
 body {
   font-family: var(--body-font);
   background: #fff;
@@ -22,30 +18,71 @@ body {
   line-height: 1.5;
 }
 
-/* ----------- MAIN ----------- */
+/* MAIN */
 main {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* ----------- GALLERY ----------- */
+/* HEADER */
+header {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+}
+header .site-title {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* HAMBURGER */
+#hamburger {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  padding: .25rem .5rem;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* NAV - mobile hidden */
+nav { background: var(--secondary-color); }
+nav .menu {
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  gap: .75rem;
+  padding: .75rem 0 0 0;
+}
+nav.open .menu { display: flex; }
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color .2s ease-in-out;
+}
+nav a:hover { color: var(--accent-color); }
+.active { color: var(--accent-color); }
+
+/* GALLERY */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr; 
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
-
 @media (min-width: 600px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }  
+  .gallery { grid-template-columns: repeat(2, 1fr); }
 }
-
 @media (min-width: 960px) {
-  .gallery { grid-template-columns: repeat(3, 1fr); } 
-}
-
-@media (min-width: 1400px) {
-  .gallery { grid-template-columns: repeat(4, 1fr); } 
+  .gallery { grid-template-columns: repeat(3, 1fr); }
 }
 
 figure {
@@ -56,85 +93,26 @@ figure {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
-
 figure img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3;       
+  aspect-ratio: 4 / 3;
   object-fit: cover;
-  grid-row: 1;
 }
-
 figure figcaption {
-  grid-row: 2;
   font-weight: bold;
   display: grid;
   place-items: center;
   padding-top: .5rem;
 }
 
-/* ----------- HEADER + NAV ----------- */
-header {
-  background: var(--secondary-color);
-  color: var(--primary-color);          
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: .5rem;
-  padding: .75rem 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,.1);
-}
-
-header .site-title {
-  font-family: var(--heading-font);
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin: 0;
-  color: var(--primary-color);
-}
-
-nav {
-  background: var(--secondary-color);
-  padding: 10px 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;                
-  padding: 0;               
-  background: none;
-}
-
-nav a {
-  color: var(--primary-color);
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  font-family: var(--body-font);
-  transition: color 0.2s ease-in-out;   
-}
-
-nav a:hover { color: var(--accent-color); text-decoration: underline; }
-
-.active { color: var(--accent-color); } 
-
-/* ----------- FOOTER ----------- */
+/* FOOTER */
 footer {
   background: var(--secondary-color);
   color: var(--primary-color);
   text-align: center;
   padding: 1rem;
-  font-size: 0.9rem;        
+  font-size: 0.9rem;
 }
-
-footer p {
-  margin: 0.3rem 0;
-  font-family: var(--heading-font);
-}
-
-footer span {
-  display: inline-block;
-  margin: 0 0.25rem;
+footer p { margin: .25rem 0; font-family: var(--heading-font); 
 }
