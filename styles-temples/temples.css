@@ -2,8 +2,10 @@
 
 /* Variables */
 :root {
+  :root {
   --primary-color: rgb(240, 240, 240);
   --secondary-color: rgb(28, 117, 168);
+}
   --heading-font: 'Oswald', sans-serif;
   --body-font: 'Lora', serif;
 }
