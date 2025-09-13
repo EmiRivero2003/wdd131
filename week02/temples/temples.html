@@ -4,9 +4,85 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temples</title>
-    <script src=""></script>
+    <link rel="stylesheet" href="styles-temples/temples.css">
+    <link rel="stylesheet" href="styles-temples/temples-large.css" media="screen and (min-width: 1024px)">
+    <script src="scripts-temples/temples.js" defer></script>
 </head>
 <body>
+    <header>
+        <p class="site-title">Temple Album</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="Home">Home</a></li>
+                <li><a href="Old">Old</a></li>
+                <li><a href="New">New</a></li>
+                <li><a href="Large">Large</a></li>
+                <li><a href="Small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <main>
+        <h1>Temple Gallery</h1>
+
+        <figure>
+            <img src="img-temples/salt-lake-temple-15669-main.jpg" alt="Salt Lake Temple">
+            <figcaption>Salt Lake Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/laie-hawai-temple.jpg" alt="Laie Hawaii Temple">
+            <figcaption>Laie Hawaii Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/nauvoo-temple-heavenly-light-300x300.jpg" alt="Nauvoo Temple">
+            <figcaption>Nauvoo Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/rome-italy-temple.jpg" alt="Rome Italy Temple">
+            <figcaption>Rome Italy Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/mexico_city_temple_lds.jpg" alt="Mexico City Temple">
+            <figcaption>Mexico City Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/tokyo-japan-temple-26340-main.jpg" alt="Tokyo Japan Temple">
+            <figcaption>Tokyo Japan Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/london-temple.jpg" alt="London England Temple">
+            <figcaption>London England Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/bern_switzerland_temple_lds.jpg" alt="Bern Switzerland Temple">
+            <figcaption>Bern Switzerland Temple</figcaption>
+        </figure>
+
+        <figure>
+            <img src="img-temples/montevideo-uruguay-temple-18474-main.jpg" alt="Montevideo Uruguay Temple">
+            <figcaption>Montevideo Uruguay Temple</figcaption>
+        </figure>
+
+        <p id="full"></p>
+        <p id="world-full"></p>
+        <p id="short"></p>
+        <p id="medium"></p>
+        <p id="year"></p>
+        <p id="month"></p>
+        <p id="day"></p>
+        <p id="dayofweek"></p> 
+    </main>
+
+    <footer>
+        <p><span id="currentyear"></span> by Emiliano Rivero - Uruguay</p>
+        <p><span id="lastModified"></span></p>
+    </footer>
 </body>
 </html>
