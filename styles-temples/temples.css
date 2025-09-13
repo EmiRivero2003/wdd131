@@ -3,7 +3,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* ----------- VARIABLES ----------- */
+.root {
+  --primary-color: white;
+  --secondary-color: yellow;
+  --accent1-color: blue;
+  --accent2-color: darkorange;
+  --heading-font: 'Oswald', sans-serif;
+  --body-font: 'Lora', serif;
+}
 
+/* ----------- BODY ----------- */
+body {
+  font-family: var(--body-font);
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+
+/* ----------- MAIN ----------- */
 main {
   max-width: 1100px;
   margin: 0 auto;
@@ -46,4 +67,12 @@ figcaption {
   text-align: center;
   font-size: .9rem;
   padding: .5rem .75rem;
+}
+
+/* ----------- NAV ----------- */
+nav {
+  background: var(--primary-color);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
