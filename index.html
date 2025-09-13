@@ -1,90 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temples</title>
-    <link rel="stylesheet" href="styles-temples/temples.css">
-    <link rel="stylesheet" href="styles-temples/temples-large.css" media="screen and (min-width: 1024px)">
-    <script src="scripts-temples/temples.js" defer></script>
-    <link href="https://fonts.google.com/share?selection.family=Cossette+Titre:wght@400;700|Oswald:wght@200..700|Roboto:ital,wght@0,100..900;1,100..900"rel="stylesheet">
-    <link href="https://fonts.google.com/share?selection.family=Cossette+Titre:wght@400;700|Lora:ital,wght@0,400..700;1,400..700|Oswald:wght@200..700|Roboto:ital,wght@0,100..900;1,100..900" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles-temples/temples.css">
+  <link rel="stylesheet" href="styles-temples/temples-large.css" media="screen and (min-width: 1024px)">
+
+  <script src="scripts-temples/temples.js" defer></script>
 </head>
 <body>
-    <header>
-        <p class="site-title">Temple Album</p>
-        <nav>
-            <ul class="menu">
-                <li><a href="Home">Home</a></li>
-                <li><a href="Old">Old</a></li>
-                <li><a href="New">New</a></li>
-                <li><a href="Large">Large</a></li>
-                <li><a href="Small">Small</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <h1>Temple Gallery</h1>
+  <header>
+    <p class="site-title">Temple Album</p>
 
-        <figure>
-            <img src="img-temples/salt-lake-temple-15669-main.jpg" alt="Salt Lake Temple">
-            <figcaption>Salt Lake Temple</figcaption>
-        </figure>
+    <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
 
-        <figure>
-            <img src="img-temples/laie-hawai-temple.jpg" alt="Laie Hawaii Temple">
-            <figcaption>Laie Hawaii Temple</figcaption>
-        </figure>
+    <nav id="primary-nav">
+      <ul class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <figure>
-            <img src="img-temples/nauvoo-temple-heavenly-light-300x300.jpg" alt="Nauvoo Temple">
-            <figcaption>Nauvoo Temple</figcaption>
-        </figure>
+  <main>
+    <h1>Temple Gallery</h1>
 
-        <figure>
-            <img src="img-temples/rome-italy-temple.jpg" alt="Rome Italy Temple">
-            <figcaption>Rome Italy Temple</figcaption>
-        </figure>
+    <section class="gallery">
+      <figure>
+        <img src="img-temples/salt-lake-temple-15669-main.jpg" alt="Salt Lake Temple" loading="lazy">
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
 
-        <figure>
-            <img src="img-temples/mexico_city_temple_lds.jpg" alt="Mexico City Temple">
-            <figcaption>Mexico City Temple</figcaption>
-        </figure>
+      <figure>
+        <img src="img-temples/laie-hawai-temple.jpg" alt="Laie Hawaii Temple" loading="lazy">
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
 
-        <figure>
-            <img src="img-temples/tokyo-japan-temple-26340-main.jpg" alt="Tokyo Japan Temple">
-            <figcaption>Tokyo Japan Temple</figcaption>
-        </figure>
+      <figure>
+        <img src="img-temples/nauvoo-temple-heavenly-light-300x300.jpg" alt="Nauvoo Temple" loading="lazy">
+        <figcaption>Nauvoo Temple</figcaption>
+      </figure>
 
-        <figure>
-            <img src="img-temples/london-temple.jpg" alt="London England Temple">
-            <figcaption>London England Temple</figcaption>
-        </figure>
+      <figure>
+        <img src="img-temples/rome-italy-temple.jpg" alt="Rome Italy Temple" loading="lazy">
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
 
-        <figure>
-            <img src="img-temples/bern_switzerland_temple_lds.jpg" alt="Bern Switzerland Temple">
-            <figcaption>Bern Switzerland Temple</figcaption>
-        </figure>
+      <figure>
+        <img src="img-temples/mexico_city_temple_lds.jpg" alt="Mexico City Temple" loading="lazy">
+        <figcaption>Mexico City Temple</figcaption>
+      </figure>
 
-        <figure>
-            <img src="img-temples/montevideo-uruguay-temple-18474-main.jpg" alt="Montevideo Uruguay Temple">
-            <figcaption>Montevideo Uruguay Temple</figcaption>
-        </figure>
+      <figure>
+        <img src="img-temples/tokyo-japan-temple-26340-main.jpg" alt="Tokyo Japan Temple" loading="lazy">
+        <figcaption>Tokyo Japan Temple</figcaption>
+      </figure>
 
-        <p id="full"></p>
-        <p id="world-full"></p>
-        <p id="short"></p>
-        <p id="medium"></p>
-        <p id="year"></p>
-        <p id="month"></p>
-        <p id="day"></p>
-        <p id="dayofweek"></p> 
-    </main>
+      <figure>
+        <img src="img-temples/london-temple.jpg" alt="London England Temple" loading="lazy">
+        <figcaption>London England Temple</figcaption>
+      </figure>
 
-    <footer>
-        <p>© <span id="currentyear"></span> ❄️ Emiliano Rivero ❄️ Uruguay</p>
-        <p><span id="lastModified"></span></p>
-    </footer>
+      <figure>
+        <img src="img-temples/bern_switzerland_temple_lds.jpg" alt="Bern Switzerland Temple" loading="lazy">
+        <figcaption>Bern Switzerland Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="img-temples/montevideo-uruguay-temple-18474-main.jpg" alt="Montevideo Uruguay Temple" loading="lazy">
+        <figcaption>Montevideo Uruguay Temple</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> ❄️ Emiliano Rivero ❄️ Uruguay</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

@@ -1,12 +1,15 @@
+/* ----------- RESET ----------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 /* ----------- VARIABLES ----------- */
 :root {
-  --primary-color: rgb(240, 240, 240);
-  --secondary-color: rgb(28, 117, 168);
+  --primary-color: rgb(240, 240, 240);   
+  --secondary-color: rgb(28, 117, 168); 
+  --accent-color: #FFD700;               
   --heading-font: 'Oswald', sans-serif;
   --body-font: 'Lora', serif;
 }
@@ -14,13 +17,10 @@
 /* ----------- BODY ----------- */
 body {
   font-family: var(--body-font);
-  background: white;
+  background: #fff;
   color: var(--secondary-color);
   line-height: 1.5;
-  padding: 1rem;
-  margin: 100px;
 }
-
 
 /* ----------- MAIN ----------- */
 main {
@@ -29,10 +29,10 @@ main {
   padding: 1rem;
 }
 
-
+/* ----------- GALLERY ----------- */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr;     
+  grid-template-columns: 1fr; 
   gap: 1rem;
 }
 
@@ -41,42 +41,58 @@ main {
 }
 
 @media (min-width: 960px) {
-  .gallery { grid-template-columns: repeat(3, 1fr); }  
+  .gallery { grid-template-columns: repeat(3, 1fr); } 
 }
 
 @media (min-width: 1400px) {
-  .gallery { grid-template-columns: repeat(4, 1fr); }
+  .gallery { grid-template-columns: repeat(4, 1fr); } 
 }
-
 
 figure {
   display: grid;
   grid-template-rows: auto 40px;
-  align-items: center;
   text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
 figure img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  aspect-ratio: 4 / 3;       
+  object-fit: cover;
   grid-row: 1;
 }
 
 figure figcaption {
   grid-row: 2;
   font-weight: bold;
-  margin-top: 0.5rem;
+  display: grid;
+  place-items: center;
+  padding-top: .5rem;
 }
 
-@media (min-width: 600px) {
-  .gallery { grid-template-columns: repeat(2, 1fr); }  /* tablet */
+/* ----------- HEADER + NAV ----------- */
+header {
+  background: var(--secondary-color);
+  color: var(--primary-color);          
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
-@media (min-width: 960px) {
-  .gallery { grid-template-columns: repeat(3, 1fr); }  /* desktop */
+header .site-title {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: var(--primary-color);
 }
 
-/* ----------- NAV ----------- */
 nav {
   background: var(--secondary-color);
   padding: 10px 20px;
@@ -86,7 +102,9 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  background-color: var(--secondary-color);
+  margin: 0;                
+  padding: 0;               
+  background: none;
 }
 
 nav a {
@@ -95,54 +113,28 @@ nav a {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: var(--body-font);
-  transition: color 0.2 ease-in-out;
+  transition: color 0.2s ease-in-out;   
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #FFD700;
-  }
+nav a:hover { color: var(--accent-color); text-decoration: underline; }
 
-.active {
-  color: var(--accent1-color);
-}
-
-
-/* ----------- HEADER ----------- */
-header {
-    background: var(--secondary-color);
-    color: rgb(104, 19, 19);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,.1);
-  }
-  
-header .site-title {
-    font-family: var(--heading-font);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    color: white;
-}  
+.active { color: var(--accent-color); } 
 
 /* ----------- FOOTER ----------- */
 footer {
-    background: var(--secondary-color);
-    color: var(--primary-color);
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.03rem 0;
-    font-size: 0.9rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;        
 }
 
 footer p {
-    margin: 0.3rem 0;
-    font-family: var(--heading-font);
+  margin: 0.3rem 0;
+  font-family: var(--heading-font);
 }
 
 footer span {
-    display: inline-block;
-    margin: 0 0.25rem;
+  display: inline-block;
+  margin: 0 0.25rem;
 }
