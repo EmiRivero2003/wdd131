@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Temple Album</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="preconnect" />
+
+  <link rel="stylesheet" href="filtred-temple-styles/filtred-temples.css">
+  <link rel="stylesheet" href="filtred-temple-styles/filtred-temples-large.css" media="screen and (min-width: 1024px)">
+
+  <script src="filtred-temples-script/filtred-temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <p class="site-title">Temple Album</p>
+
+    <button id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">☰</button>
+
+    <nav id="primary-nav">
+      <ul class="menu">
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Old</a></li>
+        <li><a href="#">New</a></li>
+        <li><a href="#">Large</a></li>
+        <li><a href="#">Small</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Temple Gallery</h1>
+    
+    <section class="gallery"></section>
+  </main>
+
+  <footer>
+    <p>© <span id="currentyear"></span> ❄️ Emiliano Rivero ❄️ Uruguay</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
