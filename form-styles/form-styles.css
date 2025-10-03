@@ -1,0 +1,149 @@
+:root {
+  --bg: #ffffff;
+  --ink: #085cb1;
+  --primary: #b4a90a;
+  --accent: #b83232;
+  --muted: #5f0000;
+
+  --maxw: 760px;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+header,
+footer {
+  background: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+
+h1 {
+  font-family: 'Ubuntu', system-ui, sans-serif;
+  margin: 0.2rem 0 0.3rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+main {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+fieldset {
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+legend {
+  font-weight: 700;
+  font-family: 'Ubuntu', system-ui, sans-serif;
+  padding: 0 0.5rem;
+}
+
+label {
+  display: block;
+  margin: 0.4rem 0;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  font: inherit;
+  background: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #bfe3ff;
+  border-color: #60a5fa;
+}
+
+.stars {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.stars input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.stars label {
+  display: inline-block;
+  padding: 0.35rem 0.55rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  user-select: none;
+  cursor: pointer;
+  font-family: 'Ubuntu', system-ui, sans-serif;
+}
+
+.stars input:checked + label {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.stars input:focus + label {
+  outline: 3px solid #bfe3ff;
+}
+
+.row {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.row.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 640px) {
+  .row.two {
+    grid-template-columns: 1fr;
+  }
+}
+
+input[type="submit"] {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  filter: brightness(1.05);
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Review Submitted</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="form-scripts/review-script.js" defer></script>
+  <style>
+    body { font-family:'Noto Sans', system-ui, sans-serif; margin:0; }
+    header, footer { background:#0f4c75; color:#fff; padding:1rem; }
+    main { max-width:720px; margin:0 auto; padding:1rem; }
+    dt { font-weight:700; }
+    dd { margin: 0 0 1rem 0; }
+    a.button { display:inline-block; padding:.7rem 1rem; background:#3282b8; color:#fff; border-radius:.5rem; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header><h1>Thanks for your review!</h1></header>
+  <main>
+    <p>Here’s what we received:</p>
+    <dl id="output"></dl>
+    <p><a class="button" href="index.html">Back to form</a></p>
+  </main>
+  <footer>
+    <p>&copy; <span id="year"></span> | Emiliano Rivero | WDD 131</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+
+    const params = new URLSearchParams(location.search);
+    const entries = {};
+    for (const [k, v] of params.entries()) {
+      if (entries[k]) {
+        if (Array.isArray(entries[k])) entries[k].push(v);
+        else entries[k] = [entries[k], v];
+      } else entries[k] = v;
+    }
+
+    const dl = document.getElementById('output');
+    Object.entries(entries).forEach(([k, v]) => {
+      const dt = document.createElement('dt'); dt.textContent = k;
+      const dd = document.createElement('dd'); dd.textContent = Array.isArray(v) ? v.join(', ') : v;
+      dl.append(dt, dd);
+    });
+  </script>
+</body>
+</html>
