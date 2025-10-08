@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <link rel="stylesheet" href="styles-form/form.css">
+  <script src="scripts-form/form.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Write a Product Review</h1>
+    <p class="hint">Method: GET • Action: review.html</p>
+  </header>
+
+  <main>
+    <form method="get" action="review.html">
+      <fieldset>
+        <legend>Product</legend>
+        <label for="productName">Product Name</label>
+        <select id="productName" name="productName" required>
+          <option value="" disabled selected>Select a Product ...</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>Overall Rating (1–5)</legend>
+        <div class="stars" aria-label="Overall rating 1 to 5">
+          <input type="radio" id="rate1" name="rating" value="1" required>
+          <label for="rate1" data-val="1" title="1 star">1</label>
+
+          <input type="radio" id="rate2" name="rating" value="2">
+          <label for="rate2" data-val="2" title="2 stars">2</label>
+
+          <input type="radio" id="rate3" name="rating" value="3">
+          <label for="rate3" data-val="3" title="3 stars">3</label>
+
+          <input type="radio" id="rate4" name="rating" value="4">
+          <label for="rate4" data-val="4" title="4 stars">4</label>
+
+          <input type="radio" id="rate5" name="rating" value="5">
+          <label for="rate5" data-val="5" title="5 stars">5</label>
+        </div>
+        <p class="hint">All the radios use the same <code>name="rating"</code> so that they are mutually exclusive.</p>
+      </fieldset>
+
+      <fieldset class="row two">
+        <legend>Installation</legend>
+        <div class="row">
+          <label for="installDate">Date of Installation</label>
+          <input type="date" id="installDate" name="installDate" required autocomplete="off">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Useful Features (check all that apply)</legend>
+        <label><input type="checkbox" id="featDurability" name="features" value="Durability"> Durability</label>
+        <label><input type="checkbox" id="featEase" name="features" value="Ease of Use"> Ease of Use</label>
+        <label><input type="checkbox" id="featPerformance" name="features" value="Performance"> Performance</label>
+        <label><input type="checkbox" id="featDesign" name="features" value="Design"> Design</label>
+        <label><input type="checkbox" id="featValue" name="features" value="Value for Money"> Value for Money</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Written Review (optional)</legend>
+        <label for="reviewText">Your Review</label>
+        <textarea id="reviewText" name="reviewText" rows="6" placeholder="Tell us what worked, what didn’t, tips for other users..."></textarea>
+      </fieldset>
+
+      <fieldset class="row">
+        <legend>About You (optional)</legend>
+        <label for="userName">Your Name</label>
+        <input type="text" id="userName" name="userName" placeholder="e.g., Emiliano Rivero" autocomplete="name">
+      </fieldset>
+
+      <div>
+        <input type="submit" value="Submit Review">
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> ❄️ Emiliano Rivero ❄️ Uruguay</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
