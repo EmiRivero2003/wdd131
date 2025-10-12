@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamer Zone | Games</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles-gamer-zone/games.css">
+  <link rel="stylesheet" href="styles-gamer-zone/cart.css">
+  <link rel="stylesheet" href="styles-gamer-zone/cart-button.css">
+
+  <!-- Scripts -->
+  <script src="scripts-gamer-zone/games.js" defer></script>
+  <script src="scripts-gamer-zone/cart.js" defer></script>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">
+      <img src="images-gamer-zone/logo-gz.png" alt="Gamer Zone Logo">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="games.html" class="active">Games</a></li>
+        <li><a href="peripherals.html">Peripherals</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <!-- Cart inside nav -->
+      <button id="cart-btn" class="cart-btn" aria-label="Shopping cart">
+        <span id="cart-count" class="cart-count">0</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <h1 class="fade-in-title">GAME LIBRARY</h1>
+    <p class="subtitle">Browse by genre and discover your next challenge.</p>
+
+    <!-- FILTER BUTTONS -->
+    <section class="filter-buttons">
+      <button class="filter-btn active" data-genre="all">All</button>
+      <button class="filter-btn" data-genre="action">Action</button>
+      <button class="filter-btn" data-genre="adventure">Adventure</button>
+      <button class="filter-btn" data-genre="racing">Racing</button>
+      <button class="filter-btn" data-genre="shooter">Shooter</button>
+    </section>
+
+    <!-- GAME CARDS -->
+    <section class="game-grid">
+
+      <!-- FORZA HORIZON 5 -->
+      <article class="game-card" data-genre="racing">
+        <span class="pill">Racing</span>
+        <img src="images-gamer-zone/games/forza-horizon-5.jpg" alt="Forza Horizon 5">
+        <h2>Forza Horizon 5</h2>
+        <p>Race across stunning landscapes in Mexico’s ultimate open-world festival.</p>
+        <div class="price">$89.99</div>
+        <div class="rating">★ 4.7</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="forza-h5"
+            data-name="Forza Horizon 5"
+            data-price="89.99"
+            data-img="images-gamer-zone/games/forza-horizon-5.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+      <!-- NEED FOR SPEED HEAT -->
+      <article class="game-card" data-genre="racing">
+        <span class="pill">Racing</span>
+        <img src="images-gamer-zone/games/nfs-heat-.jpg" alt="Need for Speed Heat">
+        <h2>Need for Speed Heat</h2>
+        <p>Compete by day, risk it all by night in the adrenaline-fueled street racing scene.</p>
+        <div class="price">$69.99</div>
+        <div class="rating">★ 4.6</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="nfs-heat"
+            data-name="Need for Speed Heat"
+            data-price="69.99"
+            data-img="images-gamer-zone/games/nfs-heat-.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+      <!-- APEX LEGENDS -->
+      <article class="game-card" data-genre="shooter">
+        <span class="pill">Shooter</span>
+        <img src="images-gamer-zone/games/apex.jpg" alt="Apex Legends">
+        <h2>Apex Legends</h2>
+        <p>Fast-paced battle royale with unique Legends and tactical gameplay.</p>
+        <div class="price">Free</div>
+        <div class="rating">★ 4.8</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="apex-legends"
+            data-name="Apex Legends"
+            data-price="0"
+            data-img="images-gamer-zone/games/apex.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+      <!-- ASSASSIN'S CREED MIRAGE -->
+      <article class="game-card" data-genre="adventure">
+        <span class="pill">Adventure</span>
+        <img src="images-gamer-zone/games/as-mirage.jpg" alt="Assassin’s Creed Mirage">
+        <h2>Assassin’s Creed Mirage</h2>
+        <p>Return to stealth roots in Baghdad, uncover secrets and master parkour assassinations.</p>
+        <div class="price">$59.99</div>
+        <div class="rating">★ 4.5</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="ac-mirage"
+            data-name="Assassin’s Creed Mirage"
+            data-price="59.99"
+            data-img="images-gamer-zone/games/as-mirage.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+      <!-- GOD OF WAR -->
+      <article class="game-card" data-genre="action">
+        <span class="pill">Action</span>
+        <img src="images-gamer-zone/games/god-of-war.jpg" alt="God of War">
+        <h2>God of War</h2>
+        <p>Join Kratos and Atreus on a mythic journey through Norse realms.</p>
+        <div class="price">$49.99</div>
+        <div class="rating">★ 4.9</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="god-of-war"
+            data-name="God of War"
+            data-price="49.99"
+            data-img="images-gamer-zone/games/god-of-war.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+      <!-- ELDEN RING -->
+      <article class="game-card" data-genre="adventure">
+        <span class="pill">Adventure</span>
+        <img src="images-gamer-zone/games/elden-ring.jpg" alt="Elden Ring">
+        <h2>Elden Ring</h2>
+        <p>Explore the vast Lands Between and forge your legend in this epic RPG.</p>
+        <div class="price">$79.99</div>
+        <div class="rating">★ 4.9</div>
+        <div class="card-actions">
+          <button 
+            class="btn js-add-to-cart"
+            data-id="elden-ring"
+            data-name="Elden Ring"
+            data-price="79.99"
+            data-img="images-gamer-zone/games/elden-ring.jpg">
+            Add to Cart
+          </button>
+          <button class="btn wish">★ Wishlist</button>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>© 2025 Gamer Zone | Emiliano Rivero | All rights reserved</p>
+  </footer>
+</body>
+</html>
