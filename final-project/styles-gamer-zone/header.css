@@ -100,36 +100,41 @@ nav ul li a.active {
   header {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    padding-top: 0.5rem;
+    text-align: center;
+    gap: 0.8rem;
   }
 
   nav {
     width: 100%;
+    overflow-x: hidden;
   }
 
   nav ul {
     display: flex;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin: 0;
-    padding: 0;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    row-gap: 0.5rem;
   }
 
   nav ul li {
-    display: inline-block;
+    flex: 1 1 45%; 
+    text-align: center;
   }
 
   nav ul li a {
     font-size: 0.9rem;
+    word-wrap: break-word; 
   }
 
   .cart-btn {
     position: fixed;
     top: 0.8rem;
     right: 0.8rem;
-    z-index: 999;
+    z-index: 1000;
     transform: scale(0.9);
   }
 
