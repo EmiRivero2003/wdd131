@@ -1,56 +1,87 @@
 /* === CART BUTTON === */
-header {
-  position: relative;
-}
+
 
 .cart-btn {
-  position: relative;
-  background: linear-gradient(135deg, #007bff, #8a2be2);
+  position: fixed;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: linear-gradient(135deg, #00fff2, #6c00ff);
   border: none;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
+  width: 55px;
+  height: 55px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #000;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
   cursor: pointer;
-  color: white;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.cart-btn svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 5000;
 }
 
 .cart-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px #8a2be2;
+  transform: scale(1.08);
+  box-shadow: 0 0 35px rgba(0, 255, 255, 0.9);
 }
 
+.cart-btn svg path {
+  fill: #000;
+  transition: fill 0.3s ease;
+}
+
+.cart-btn:hover svg path {
+  fill: #00fff2;
+}
+
+/* === CART COUNT === */
 .cart-count {
   position: absolute;
-  top: 4px;
-  right: 6px;
-  background: #ff4444;
-  color: white;
-  font-size: 0.7rem;
+  top: -6px;
+  right: -5px;
+  background: #000;
+  color: #00fff2;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
   font-weight: bold;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
 }
 
-/* === RESPONSIVE === */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
+/* === MOBILE === */
+@media (max-width: 1024px) {
+  .cart-btn {
+    right: 2rem;
+    top: 1rem;
+    width: 50px;
+    height: 50px;
   }
+}
+
+@media (max-width: 768px) {
 
   .cart-btn {
-    position: relative;
-    right: 0;
-    transform: none;
-    margin-top: 0.8rem;
+    right: 1.2rem;
+    top: 0.8rem;
+    width: 45px;
+    height: 45px;
   }
+
+  .cart-count {
+    font-size: 0.7rem;
+  }
+}
+
+header {
+  position: relative;
+  z-index: 10;
+}
+
+nav {
+  margin-right: 5rem;
 }
