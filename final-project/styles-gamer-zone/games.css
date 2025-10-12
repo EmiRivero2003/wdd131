@@ -285,3 +285,41 @@ footer {
   border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+/* === RESPONSIVE GAMES PAGE === */
+@media (max-width: 768px) {
+  .filter-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .filter-btn {
+    width: 45%;
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .game-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .game-card {
+    width: 90%;
+    text-align: center;
+  }
+
+  .game-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}

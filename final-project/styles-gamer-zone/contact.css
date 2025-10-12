@@ -231,3 +231,24 @@ footer {
   margin-top: 3rem;
 }
 
+/* === RESPONSIVE CONTACT PAGE === */
+@media (max-width: 768px) {
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  input, textarea, button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}

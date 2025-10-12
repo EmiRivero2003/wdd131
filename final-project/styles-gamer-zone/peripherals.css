@@ -296,3 +296,34 @@ footer {
   margin-top: 3rem;
   font-family: var(--body-font);
 }
+
+/* === RESPONSIVE PERIPHERALS PAGE === */
+@media (max-width: 768px) {
+  main {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .product-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .product-card {
+    width: 90%;
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
