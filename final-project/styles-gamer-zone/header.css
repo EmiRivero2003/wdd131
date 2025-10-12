@@ -94,3 +94,38 @@ nav ul li a.active {
   border-radius: 10px;
   border: 1px solid #00fff2;
 }
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  .cart-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    transform: scale(0.9);
+  }
+
+  .logo img {
+    width: 110px;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
