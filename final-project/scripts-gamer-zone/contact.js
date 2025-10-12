@@ -16,12 +16,3 @@ form.addEventListener('submit', (e) => {
   alert(`Thanks for reaching out, ${name}! We'll get back to you soon 🎮`);
   form.reset();
 });
-
-// === HAMBURGER MENU FUNCTIONALITY ===
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-});

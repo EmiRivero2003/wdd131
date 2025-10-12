@@ -183,12 +183,3 @@ document.addEventListener("click", (e) => {
   // Redirigir al checkout
   window.location.href = "checkout.html";
 });
-
-// === HAMBURGER MENU FUNCTIONALITY ===
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-});

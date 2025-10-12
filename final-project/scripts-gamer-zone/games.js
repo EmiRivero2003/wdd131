@@ -55,12 +55,3 @@ style.innerHTML = `
   to { opacity: 1; transform: translateY(0); }
 }`;
 document.head.appendChild(style);
-
-// === HAMBURGER MENU FUNCTIONALITY ===
-const hamburger = document.getElementById("hamburger");
-const nav = document.querySelector("nav");
-
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  nav.classList.toggle("active");
-});
