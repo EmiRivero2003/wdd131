@@ -6,7 +6,7 @@ const peripherals = [
     category: "headset",
     price: 89.99,
     rating: 4.7,
-    img: "images-gamer-zone/peripherals/hyperx.jpg",
+    img: "images-gamer-zone/peripherals/hyperx.webp",
     desc: "7.1 surround, noise-cancelling mic, total comfort."
   },
   {
@@ -15,7 +15,7 @@ const peripherals = [
     category: "keyboard",
     price: 129.99,
     rating: 4.6,
-    img: "images-gamer-zone/peripherals/razer-blackwidow-v3.jpg",
+    img: "images-gamer-zone/peripherals/razer-blackwidow-v3.webp",
     desc: "Mechanical RGB, precise switches, aluminum body."
   },
   {
@@ -24,7 +24,7 @@ const peripherals = [
     category: "mouse",
     price: 49.99,
     rating: 4.8,
-    img: "images-gamer-zone/peripherals/logitech-g502-hero.jpg",
+    img: "images-gamer-zone/peripherals/logitech-g502-hero.webp",
     desc: "HERO 25K sensor, adjustable weights, 11 programmable buttons."
   },
   {
@@ -33,7 +33,7 @@ const peripherals = [
     category: "controller",
     price: 159.99,
     rating: 4.9,
-    img: "images-gamer-zone/peripherals/xbox-elite-series-2.jpg",
+    img: "images-gamer-zone/peripherals/xbox-elite-series-2.webp",
     desc: "Adjustable triggers, pro profiles, long-lasting battery."
   }
 ];
